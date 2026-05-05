@@ -6,74 +6,88 @@
     <title>Links - Cristian | KCA3D</title>
     <style>
         :root {
-            --bg-color: #f4f4f9;
-            --text-color: #333333;
-            --btn-bg: #2b2d42;
-            --btn-hover: #8d99ae;
-            --text-light: #666666;
+            /* Paleta de cores baseada na logo KCA3D */
+            --bg-color: #0f1016; /* Fundo escuro para destacar as cores neon */
+            --text-color: #ffffff; /* Texto principal branco */
+            --text-light: #a0a0b0; /* Texto secundário acinzentado */
+            
+            /* Cores dos botões */
+            --btn-bg: #1a1b26; /* Fundo do botão sutilmente mais claro que a tela */
+            --btn-border: #00d2ff; /* Azul/Ciano da logo */
+            --btn-hover-gradient: linear-gradient(90deg, #00d2ff 0%, #ff007f 100%); /* Gradiente Ciano para Magenta/Rosa */
         }
 
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             background-color: var(--bg-color); 
+            color: var(--text-color);
             display: flex; 
             flex-direction: column; 
             align-items: center; 
             padding: 2rem 1rem; 
             margin: 0;
+            min-height: 100vh;
         }
 
-        /* Estilo da foto de perfil ou logo */
+        /* Estilo da foto de perfil com efeito de brilho */
         .profile-pic { 
-            width: 200px;  /* LARGURA AUMENTADA AQUI */
-            height: 200px; /* ALTURA AUMENTADA AQUI */
+            width: 200px;  
+            height: 200px; 
             border-radius: 50%; 
             object-fit: cover; 
             margin-bottom: 1rem; 
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            /* Brilho neon sutil ao redor da imagem */
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.4), 0 0 40px rgba(255, 0, 127, 0.2);
+            border: 2px solid var(--btn-border);
         }
 
         h1 { 
             color: var(--text-color); 
             margin: 0 0 0.5rem 0; 
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            letter-spacing: 2px;
         }
 
         p { 
             color: var(--text-light); 
-            margin-bottom: 2rem; 
+            margin-bottom: 2.5rem; 
             text-align: center; 
             font-size: 1rem;
         }
 
-        /* Container dos botões para manter o alinhamento */
+        /* Container dos botões */
         .links-container {
             width: 100%;
             max-width: 350px;
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 1.2rem;
         }
 
-        /* Estilo dos botões */
+        /* Estilo dos botões modernos */
         .link-btn { 
             display: block; 
             width: 100%; 
             padding: 1rem; 
             background-color: var(--btn-bg); 
-            color: white; 
+            color: var(--text-color); 
             text-align: center; 
             text-decoration: none; 
-            border-radius: 8px; 
+            border-radius: 12px; 
             font-weight: 600; 
-            transition: all 0.3s ease;
+            letter-spacing: 1px;
+            transition: all 0.4s ease;
             box-sizing: border-box;
+            border: 2px solid var(--btn-border); /* Borda ciano */
         }
 
+        /* Efeito quando passa o mouse ou clica no botão */
         .link-btn:hover { 
-            background-color: var(--btn-hover); 
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            background: var(--btn-hover-gradient);
+            border-color: transparent;
+            transform: translateY(-4px); /* Botão "pula" um pouquinho pra cima */
+            box-shadow: 0 10px 20px rgba(0, 210, 255, 0.3); /* Sombra neon */
+            color: #ffffff;
         }
     </style>
 </head>
@@ -85,10 +99,10 @@
     <p>Impressão 3D, Projetos Especiais</p>
 
     <div class="links-container">
-        <!-- Adicionado o link do WhatsApp com uma mensagem pré-definida (opcional) -->
+        <!-- Link do WhatsApp -->
         <a href="https://wa.me/5545991032480?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento%20com%20a%20KCA3D." class="link-btn" target="_blank">Orçamentos via WhatsApp</a>
         
-        <!-- Corrigido o número do catálogo (faltava um 9) -->
+        <!-- Link do Catálogo -->
         <a href="https://wa.me/c/5545991032480" class="link-btn" target="_blank">Catálogo de Peças 3D</a>
     </div>
 
