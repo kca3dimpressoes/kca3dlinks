@@ -30,18 +30,15 @@
         }
 
         /* Estilo da foto de perfil com efeito de brilho */
+        /* Estilo da foto de perfil original */
         .profile-pic { 
-            width: 200px;  
-            height: 200px; 
-            border-radius: 50%; 
-            object-fit: cover; 
-            
-            /* ADICIONE ESTA LINHA AQUI: */
-            object-position: 50% 80%; 
-            
+            width: 250px; /* Largura da imagem (pode ajustar se quiser maior/menor) */
+            height: auto; /* Deixa a altura automática para não achatar ou esticar a foto */
             margin-bottom: 1rem; 
-            box-shadow: 0 0 20px rgba(0, 210, 255, 0.4), 0 0 40px rgba(255, 0, 127, 0.2);
-            border: 2px solid var(--btn-border);
+            
+            /* Mantive apenas um leve brilho no fundo para combinar com o tema escuro */
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.2);
+            border-radius: 12px; /* Deixa as pontinhas da foto levemente arredondadas (opcional) */
         }
 
         h1 { 
